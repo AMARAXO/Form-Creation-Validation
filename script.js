@@ -12,20 +12,20 @@ document.addEventListener('DOMContentLoaded',()=>{
     const message = []
     if (username.length<3){
         isValid = false;
-        usernameError.textContent = 'Username must be at least 3 characters long.';
+        message.push = 'Username must be at least 3 characters long.';
     }else{
-        usernameError.textContent = '';
+        message.push = '';
     };
     if (email.include('@')|| email.include('.')){
         isValid = false;
-        emailError.textContent = 'Please enter a valid email address.';
+        message.push = 'Please enter a valid email address.';
     }else{
-        usernameError.textContent = ''};
+        message.push = ''};
     if (password.length<8){
         isValid = false;
-        passwordError.textContent = 'Password must be at least 8 characters long.';
+        message.push = 'Password must be at least 8 characters long.';
     }else{
-        usernameError.textContent = ''
+        message.push = ''
     };
     feedbackDiv.style.display='block'
     if (isValid){
