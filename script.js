@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
-    const form = document.getElementById('registration-form')
+    function handleFormSubmission () {
+        const form = document.getElementById('registration-form')
     const feedbackDiv = document.getElementById('form-feedback')
     form.addEventListener('submit',(event)=>{
         event.preventDefault();
@@ -34,4 +35,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         feedbackDiv.innerHTML = messages.join('<br>');
         feedbackDiv.style.color = '#dc3545';
     }
+    }
+
+    handleFormSubmission () 
 });
